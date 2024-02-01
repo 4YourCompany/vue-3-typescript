@@ -23,3 +23,14 @@ const appInfo: AppInfo = reactive({
     :limit="10"
   ></Counter>
 </template>
+
+<script setup>
+import useAutoCount from './composables/useAutoCount'
+
+const { count } = useAutoCount(0)
+
+function reset() {
+  count.value = 0
+}
+
+</script>
